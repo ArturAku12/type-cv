@@ -22,6 +22,7 @@ function App() {
       <h3>{basicInfo.email}</h3>
       <Education/>
       <Work/>
+      <br></br>
     </div>
   );
 }
