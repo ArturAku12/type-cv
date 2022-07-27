@@ -19,16 +19,22 @@ const Work = () => {
         setWorkKeys(workKeys.filter(key => key !==work_key))
     }
 
+    const displayEntries = () => {
+        return (
+            <div>
+                <hr></hr>
+                <button onClick={addKey}> Add Work </button>
+                {workKeys.map(work_key =>
+                    <div key={work_key}>
+                        <button onClick={() => handleDelete(work_key)}>Delete</button>
+                        <WorkControl work_key={work_key} />
+                    </div>)}
+            </div>
+        )
+    }
     return (
         <div>
-             <hr></hr>
-            <button onClick={addKey}> Add Work </button>
-            {workKeys.map(work_key =>
-                
-                <div key={work_key}>
-                    <button onClick={() => handleDelete(work_key)}>Delete</button>
-                    <WorkControl work_key={work_key} />
-                </div>)}
+            {displayEntries()}
         </div>
     )
 }

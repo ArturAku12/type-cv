@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import EducationControl from './components/EducationControl'; 
 import uniqid from 'uniqid';
 
@@ -19,12 +19,12 @@ const Education = () => {
     }
 
     const handleDelete = (education_key: any) => {
-        console.log(education_key)
         setEducationKeys(educationKeys.filter(key => key !== education_key))
     } 
 
-    return (
-        <div> 
+    const displayEntries = () => {
+        return (
+            <div> 
              <hr></hr>
             <button onClick={addKey}> Add Education </button>
             {educationKeys.map((education_key) => 
@@ -34,6 +34,13 @@ const Education = () => {
                     <hr></hr>
                 </div>
             )} 
+        </div>
+        )
+    }
+
+    return (
+        <div> 
+            {displayEntries()}
         </div>
     )
 }
