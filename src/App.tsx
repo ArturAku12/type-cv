@@ -17,7 +17,9 @@ function App() {
 
   return (
     <div className="App-header">
-      <h1>CV Times</h1>
+      <h1>{basicInfo.name}</h1>
+      <h2>{basicInfo.phone}</h2>
+      <h3>{basicInfo.email}</h3>
       <Education/>
       <Work/>
     </div>
