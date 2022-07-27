@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App-header">
-      <h1>CV Time</h1>
+      <h1>CV Times</h1>
       <Education/>
       <Work/>
     </div>
