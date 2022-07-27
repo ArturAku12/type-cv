@@ -11,10 +11,10 @@ const WorkControl = (props:any) => {
     }
 
     const [work, setWork] = useState<WorkComponent>({
-        place: "",
-        position: "",
-        months_of_experience: "",
-        tasks: "",
+        place: "Ellex",
+        position: "Intern",
+        months_of_experience: "3 months",
+        tasks: "Research, translation, writing up documents",
     })
 
     const [editState, setEditState] = useState(true)
@@ -48,10 +48,10 @@ const WorkControl = (props:any) => {
                 :
                 <div>
                     <button onClick={() => setEditState(!editState)}>Edit</button>
-                    <h1>{work.place}</h1>
-                    <h1>{work.position}</h1>
-                    <h1>{work.months_of_experience}</h1>
-                    <h1>{work.tasks}</h1>
+                    <h2>{work.place}</h2>
+                    <h2>{work.position}</h2>
+                    <h2>{work.months_of_experience}</h2>
+                    <h2>{work.tasks}</h2>
                 </div>
             }
         </div>

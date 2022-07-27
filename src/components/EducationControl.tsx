@@ -12,9 +12,9 @@ const EducationControl = (props: any) => {
     }
 
     const [education, setEducation] = useState<EducationComponent>({
-        school: "",
-        years: "",
-        subject: ""
+        school: "UBC",
+        years: "2017-2019",
+        subject: "Engineering"
     })
     
     const [editState, setEditState] = useState(true)
@@ -47,9 +47,9 @@ const EducationControl = (props: any) => {
             : 
             <div>
                 <button onClick={() => setEditState(!editState)}>Edit</button>
-                <h1>{education.school}</h1>
-                <h1>{education.years}</h1>
-                <h1>{education.subject}</h1>
+                <h2>{education.school}</h2>
+                <h2>{education.years}</h2>
+                <h2>{education.subject}</h2>
             </div>}
         </div>
     )
