@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 
 const EducationControl = (props: any) => {
     
-    const { education_key } = props; 
+    const { education_key, handleDelete } = props; 
 
     interface EducationComponent {
         school: string;
         years: string;
         subject: string;
     }
-
+    
     const [education, setEducation] = useState<EducationComponent>({
         school: "UBC",
         years: "2017-2019",
@@ -35,6 +35,7 @@ const EducationControl = (props: any) => {
 
     return (
         <div>
+            <button onClick={() => handleDelete(education_key)}>Delete</button>
             {editState ? 
             <div>
                 <form onSubmit={(event) => {handleSubmit(event)}}>

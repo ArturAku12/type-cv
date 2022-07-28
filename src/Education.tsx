@@ -29,8 +29,7 @@ const Education = () => {
             <button onClick={addKey}> Add Education </button>
             {educationKeys.map((education_key) => 
                 <div key={education_key}> 
-                    <button onClick={() => handleDelete(education_key)}>Delete</button>
-                    <EducationControl education_key = {education_key} />
+                    <EducationControl education_key = {education_key} handleDelete = {handleDelete}  />
                     <hr></hr>
                 </div>
             )} 
